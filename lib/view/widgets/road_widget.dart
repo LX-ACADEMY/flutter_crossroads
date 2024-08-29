@@ -105,6 +105,7 @@ class _RoadWidgetState extends State<RoadWidget> {
                             return Center(
                               child: CarWidget(
                                 score: widget.score,
+                                isReverse: widget.reverse,
                                 resetGame: widget.resetGame,
                                 highScore: widget.highScore,
                                 isSubjectPresent: widget.isSubjectPresent,

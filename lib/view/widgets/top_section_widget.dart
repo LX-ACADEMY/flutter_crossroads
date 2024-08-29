@@ -47,9 +47,9 @@ class TopSectionWidget extends StatelessWidget {
               isGamePaused ? Icons.play_arrow : Icons.pause,
             ),
             style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(Colors.white),
-              shadowColor: MaterialStatePropertyAll(Colors.black),
-              elevation: MaterialStatePropertyAll(10),
+              backgroundColor: WidgetStatePropertyAll(Colors.white),
+              shadowColor: WidgetStatePropertyAll(Colors.black),
+              elevation: WidgetStatePropertyAll(10),
             ),
           ),
           const SizedBox(

@@ -7,6 +7,7 @@ class CarWidget extends StatefulWidget {
   final int score;
   final int highScore;
   final VoidCallback resetGame;
+  final bool isReverse;
 
   const CarWidget({
     required this.resetGame,
@@ -15,6 +16,7 @@ class CarWidget extends StatefulWidget {
     required this.subjectKey,
     required this.isSubjectPresent,
     required this.roadScrollController,
+    required this.isReverse,
     super.key,
   });
 
@@ -63,13 +65,16 @@ class _CarWidgetState extends State<CarWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // color: Colors.amber,
       height: 40,
       width: 100,
-      child: Image.asset(
-        "assets/images-removebg-preview.png",
-        fit: BoxFit.fill,
+      child: Transform.flip(
+        flipX: !widget.isReverse,
+        child: Image.asset(
+          "assets/images-removebg-preview.png",
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }
